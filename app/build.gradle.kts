@@ -72,7 +72,6 @@ dependencies {
     kapt(Libs.RoomDb.roomCompiler)
     implementation(Libs.RoomDb.roomKtx)
 
-
     // Dagger - Hilt
     implementation(Libs.DaggerHilt.hiltAndroid)
     kapt(Libs.DaggerHilt.hiltAndroidCompiler)
