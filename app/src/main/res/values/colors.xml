@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Night Mode Colors -->
+    <color name="secondary500">#F9AA33</color>
+    <color name="primary600">#4A6572</color>
+    <color name="primary700">#344955</color>
+    <color name="primary800">#232F34</color>
 </resources>

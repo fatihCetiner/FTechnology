@@ -3,6 +3,7 @@
     <style name="Base.Theme.FTechnology" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/primary800</item>
     </style>
 
     <style name="Theme.FTechnology" parent="Base.Theme.FTechnology" />

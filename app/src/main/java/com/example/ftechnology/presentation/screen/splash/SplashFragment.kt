@@ -28,7 +28,7 @@ class SplashFragment : Fragment() {
     }
 
     private fun observe(){
-        viewModel.navigateToSign.observe(viewLifecycleOwner){
+        viewModel.navigateToOnboarding.observe(viewLifecycleOwner){
             val action = SplashFragmentDirections.splashToProduct()
             findNavController().navigate(action)
         }

@@ -11,7 +11,7 @@ import kotlin.time.Duration.Companion.seconds
 class SplashViewModel: ViewModel() {
 
     private val _navigateToOnboarding = MutableLiveData<Unit>()
-    val navigateToSign: LiveData<Unit> get() = _navigateToOnboarding
+    val navigateToOnboarding: LiveData<Unit> get() = _navigateToOnboarding
     init {
         startSplash()
     }
