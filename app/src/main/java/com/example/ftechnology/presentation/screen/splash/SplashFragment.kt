@@ -1,5 +1,6 @@
 package com.example.ftechnology.presentation.screen.splash
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,11 +28,20 @@ class SplashFragment : Fragment() {
         observe()
     }
 
-    private fun observe(){
-        viewModel.navigateToOnboarding.observe(viewLifecycleOwner){
-            val action = SplashFragmentDirections.splashToProduct()
-            findNavController().navigate(action)
+    private fun observe() {
+        viewModel.navigateToOnboarding.observe(viewLifecycleOwner) {
+            if (onBoardingFinished()) {
+                val action = SplashFragmentDirections.splashToProduct()
+                findNavController().navigate(action)
+            } else {
+                val action = SplashFragmentDirections.splashToOnboarding()
+                findNavController().navigate(action)
+            }
         }
     }
 
+    private fun onBoardingFinished(): Boolean {
+        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("Finished", false)
+    }
 }

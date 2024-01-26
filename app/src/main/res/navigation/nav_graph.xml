@@ -11,12 +11,30 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
+            android:id="@+id/splashToOnboarding"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
             android:id="@+id/splashToProduct"
-            app:destination="@id/productFragment" />
+            app:destination="@id/productFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/productFragment"
         android:name="com.example.ftechnology.presentation.screen.product.ProductFragment"
         android:label="fragment_product"
         tools:layout="@layout/fragment_product" />
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.ftechnology.presentation.screen.onboarding.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/onboardingToProduct"
+            app:destination="@id/productFragment"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
