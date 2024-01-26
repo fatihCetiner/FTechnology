@@ -23,4 +23,15 @@ class SignInFragment : Fragment() {
         return binding.root
 
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        goToSignUpFragment()
+    }
+    private fun goToSignUpFragment() {
+        binding.tvRegisterNow.setOnClickListener {
+            val action = SignInFragmentDirections.signInToSignUp()
+            findNavController().navigate(action)
+        }
+    }
 }
