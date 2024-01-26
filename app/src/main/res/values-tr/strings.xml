@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">FTechnology</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--OnBoarding Msg -->
+    <string name="quality_title">Kaliteli Ürün</string>
+    <string name="quality_product_msg">FTechnology olarak ürünlerimizin kalitesinden büyük gurur duyuyoruz. Her bir ürün hassasiyetle üretilir ve endüstri standartlarını karşılamak ve aşmak için kapsamlı kalite güvence kontrollerinden geçirilir. Her satın alma işleminin mükemmelliğe olan bağlılığımızı yansıtmasını sağlayarak birinci sınıf bir deneyim sunmaya kararlıyız.</string>
+
+    <string name="secure_title">Güvenlik Önlemleri</string>
+    <string name="secure_msg">Güveniniz bizim en büyük önceliğimizdir. İçiniz rahat olsun, kişisel bilgilerinizi korumak için gelişmiş güvenlik önlemleri kullanıyoruz. Sağlam şifreleme teknolojilerimiz ve sıkı veri koruma protokollerimiz güvenli bir alışveriş ortamını garanti eder. Gizliliğiniz önemlidir ve bizimle olan yolculuğunuz boyunca gizliliğinizin bozulmadan kalmasını sağlamak için buradayız.</string>
+
+    <string name="delivery_title">Hızlı ve Güvenilir Teslimat</string>
+    <string name="delivery_msg">Zamanınızın önemini anlıyoruz ve hızlı teslimat taahhüdümüz bu anlayışı yansıtıyor. Lojistik ekibimiz, siparişlerinizin hızlı bir şekilde işlenmesini ve mümkün olan en kısa sürede kapınıza teslim edilmesini sağlamak için yorulmadan çalışır. Güvenilir, zamanında teslimatın rahatlığını bizimle yaşayın.</string>
+
 </resources>

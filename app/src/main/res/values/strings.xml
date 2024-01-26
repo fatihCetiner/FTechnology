@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">FTechnology</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- OnBoarding Screen Msg -->
+    <string name="quality_title">Product Quality</string>
+    <string name="quality_product_msg">At FTechnology, we take immense pride in the quality of our products. Each item is crafted with precision and undergoes thorough quality assurance checks to meet and exceed industry standards. We\'re committed to delivering a premium experience, ensuring that every purchase reflects our dedication to excellence.</string>
+
+    <string name="secure_title">Security Measures</string>
+    <string name="secure_msg">Your trust is our utmost priority. Rest assured, we employ advanced security measures to protect your personal information. Our robust encryption technologies and stringent data protection protocols guarantee a secure shopping environment. Your privacy matters, and we\'re here to ensure it remains intact throughout your journey with us.</string>
+
+    <string name="delivery_title">Prompt and Reliable Delivery</string>
+    <string name="delivery_msg">We understand the importance of your time, and our commitment to prompt delivery reflects that understanding. Our logistics team works tirelessly to ensure your orders are processed swiftly and delivered to your doorstep in the shortest possible time. Experience the convenience of reliable, on-time delivery with us.</string>
 </resources>
