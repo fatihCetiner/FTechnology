@@ -16,8 +16,8 @@
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/splashToProduct"
-            app:destination="@id/productFragment"
+            android:id="@+id/splashToSignIn"
+            app:destination="@id/signInFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>

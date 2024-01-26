@@ -31,7 +31,7 @@ class SplashFragment : Fragment() {
     private fun observe() {
         viewModel.navigateToOnboarding.observe(viewLifecycleOwner) {
             if (onBoardingFinished()) {
-                val action = SplashFragmentDirections.splashToProduct()
+                val action = SplashFragmentDirections.splashToSignIn()
                 findNavController().navigate(action)
             } else {
                 val action = SplashFragmentDirections.splashToOnboarding()

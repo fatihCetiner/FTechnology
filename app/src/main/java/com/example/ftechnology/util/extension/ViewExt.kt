@@ -7,7 +7,7 @@ import com.google.android.material.snackbar.Snackbar
 
 fun View.snack(message: String) {
     Snackbar.make(this, message, 1200)
-        .setTextColor(Color.WHITE)
-        .setBackgroundTint(resources.getColor(R.color.black))
+        .setTextColor(resources.getColor(R.color.primary600))
+        .setBackgroundTint(resources.getColor(R.color.secondary500))
         .show()
 }
