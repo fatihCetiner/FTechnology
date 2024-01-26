@@ -22,7 +22,7 @@ class ThirdScreen : Fragment() {
         binding = FragmentThirdScreenBinding.inflate(inflater, container, false)
 
         binding.tvFinish.setOnClickListener {
-            findNavController().navigate(R.id.onboardingToProduct)
+            findNavController().navigate(R.id.onboardingTosignIn)
             onBoardingFinish()
         }
         return binding.root

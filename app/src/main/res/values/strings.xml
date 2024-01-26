@@ -11,4 +11,11 @@
 
     <string name="delivery_title">Prompt and Reliable Delivery</string>
     <string name="delivery_msg">We understand the importance of your time, and our commitment to prompt delivery reflects that understanding. Our logistics team works tirelessly to ensure your orders are processed swiftly and delivered to your doorstep in the shortest possible time. Experience the convenience of reliable, on-time delivery with us.</string>
+
+    <!-- Sign In Screen -->
+    <string name="sig_in">Sign In</string>
+    <string name="enter_email">Enter E-Mail</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="register_yet">Have you registered yet?</string>
+    <string name="register_now">Register Now</string>
 </resources>
