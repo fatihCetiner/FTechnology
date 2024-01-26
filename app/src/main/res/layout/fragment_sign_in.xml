@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvSignIn"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/signin_anim">
+        app:lottie_rawRes="@raw/alternative_signin_anim">
 
     </com.airbnb.lottie.LottieAnimationView>
 

@@ -47,5 +47,17 @@
             app:destination="@id/productFragment"
             app:popUpTo="@id/signInFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/signInToSignUp"
+            app:destination="@id/singUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpFragment"
+        android:name="com.example.ftechnology.presentation.screen.signup.SingUpFragment"
+        android:label="fragment_sing_up"
+        tools:layout="@layout/fragment_sing_up" >
+        <action
+            android:id="@+id/signUpToSignIn"
+            app:destination="@id/signInFragment" />
     </fragment>
 </navigation>

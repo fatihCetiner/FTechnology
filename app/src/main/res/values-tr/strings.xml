@@ -12,10 +12,12 @@
     <string name="delivery_title">Hızlı ve Güvenilir Teslimat</string>
     <string name="delivery_msg">Zamanınızın önemini anlıyoruz ve hızlı teslimat taahhüdümüz bu anlayışı yansıtıyor. Lojistik ekibimiz, siparişlerinizin hızlı bir şekilde işlenmesini ve mümkün olan en kısa sürede kapınıza teslim edilmesini sağlamak için yorulmadan çalışır. Güvenilir, zamanında teslimatın rahatlığını bizimle yaşayın.</string>
 
-    <!-- Sign In Screen -->
+    <!-- Sign In - Sign Up Screen -->
     <string name="sig_in">Giriş Yap</string>
     <string name="enter_email">E-Mail Giriniz</string>
     <string name="enter_password">Şifre Giriniz</string>
     <string name="register_yet">Henüz Kayı Olmadınızmı?</string>
     <string name="register_now">Hemen Kayıt Ol</string>
+    <string name="sig_up">Kayıt Ol</string>
+
 </resources>
