@@ -19,8 +19,9 @@
     <string name="sig_in">Giriş Yap</string>
     <string name="enter_email">E-Mail Giriniz</string>
     <string name="enter_password">Şifre Giriniz</string>
-    <string name="register_yet">Henüz Kayı Olmadınızmı?</string>
-    <string name="register_now">Hemen Kayıt Ol</string>
+    <string name="password_again">Şifre Tekrar</string>
+    <string name="register_yet">Henüz Hesabın Yokmu?</string>
+    <string name="register_now">Hemen Kayıt Ol!</string>
     <string name="sig_up">Kayıt Ol</string>
 
 </resources>

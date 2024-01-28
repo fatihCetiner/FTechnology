@@ -19,8 +19,9 @@
     <string name="sig_in">Sign In</string>
     <string name="enter_email">Enter E-Mail</string>
     <string name="enter_password">Enter Password</string>
+    <string name="password_again">Password Again</string>
     <string name="register_yet">Have you registered yet?</string>
-    <string name="register_now">Register Now</string>
+    <string name="register_now">Register Now!</string>
     <string name="sig_up">Sign Up</string>
 
 

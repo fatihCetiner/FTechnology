@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "860807877105",
+    "project_id": "ftechnology-af8db",
+    "storage_bucket": "ftechnology-af8db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860807877105:android:89b2632dab72ea9930b450",
+        "android_client_info": {
+          "package_name": "com.example.ftechnology"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWyuGPDtmZjJRcgThwY3HgZXOgxkKSVNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

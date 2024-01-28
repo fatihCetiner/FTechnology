@@ -61,6 +61,12 @@ object Libs {
         val activityKtx = "androidx.activity:activity-ktx:${Versions.activity}"
     }
 
+    // FireBase
+    object FireBase{
+        val fireBase = "com.google.firebase:firebase-bom:${Versions.fireBaseBom}"
+        val fireBaseAuth = "com.google.firebase:firebase-auth-ktx:${Versions.fireBaseAuth}"
+    }
+
     // Lottie
     object Lottie {
         val lottie = "com.airbnb.android:lottie:${Versions.lottie}"

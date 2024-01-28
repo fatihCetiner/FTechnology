@@ -33,6 +33,10 @@ object Versions {
     const val lifecycle = "2.7.0"
     const val activity = "1.8.2"
 
+    // FireBase
+    const val fireBaseBom = "32.7.0"
+    const val fireBaseAuth = "22.1.2"
+
     // Lottie
     const val lottie = "5.2.0"
 

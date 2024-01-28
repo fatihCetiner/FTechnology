@@ -6,6 +6,7 @@ plugins {
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
     id("androidx.navigation.safeargs.kotlin")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -85,6 +86,10 @@ dependencies {
     implementation(Libs.CoroutineLifecycleScopes.lifecycleViewModelKtx)
     implementation(Libs.CoroutineLifecycleScopes.lifecycleRuntimeKtx)
     implementation(Libs.CoroutineLifecycleScopes.activityKtx)
+
+    // FireBase
+    implementation(platform(Libs.FireBase.fireBase))
+    implementation(Libs.FireBase.fireBaseAuth)
 
     // Lottie
     implementation(Libs.Lottie.lottie)
