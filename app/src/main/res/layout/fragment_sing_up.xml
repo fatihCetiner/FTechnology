@@ -42,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="@string/enter_email"
+        android:maxLines="1"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +51,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tfEmailText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

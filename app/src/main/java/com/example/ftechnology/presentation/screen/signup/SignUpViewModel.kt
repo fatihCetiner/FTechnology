@@ -9,9 +9,11 @@ import kotlinx.coroutines.launch
 
 class SignUpViewModel : ViewModel() {
 
-
     private val auth = FirebaseAuth.getInstance()
+
     private val _navigateToSignInScreen = MutableSharedFlow<Unit>()
+    val navigateToSignInScreen: SharedFlow<Unit> get() = _navigateToSignInScreen
+
     private val _error = MutableSharedFlow<SignUpError>()
     val error: SharedFlow<SignUpError> get() = _error
 

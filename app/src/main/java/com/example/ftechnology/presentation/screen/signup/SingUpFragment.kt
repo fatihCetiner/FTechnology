@@ -46,9 +46,6 @@ class SingUpFragment : Fragment() {
                 password = password,
                 confirmPassword = confirmPassword
             )
-            Toast.makeText(requireContext(), "Başarılı", Toast.LENGTH_SHORT)
-            val action = SingUpFragmentDirections.signUpToSignIn()
-            findNavController().navigate(action)
         }
     }
 
@@ -57,6 +54,11 @@ class SingUpFragment : Fragment() {
             viewModel.error.collect { error: SignUpError ->
                 val stringResourceId = SignUpError.toStringResource(error)
                 Snackbar.make(requireView(), stringResourceId, Snackbar.LENGTH_SHORT).show()
+            }
+        }
+        lifecycleScope.launch {
+            viewModel.navigateToSignInScreen.collect {
+                findNavController().navigate(R.id.signUpToSignIn)
             }
         }
     }
