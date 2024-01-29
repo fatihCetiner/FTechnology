@@ -19,9 +19,17 @@
     <string name="sig_in">Giriş Yap</string>
     <string name="enter_email">E-Mail Giriniz</string>
     <string name="enter_password">Şifre Giriniz</string>
-    <string name="password_again">Şifre Tekrar</string>
+    <string name="password_confirm">Şifre Onaylayın</string>
     <string name="register_yet">Henüz Hesabın Yokmu?</string>
     <string name="register_now">Hemen Kayıt Ol!</string>
     <string name="sig_up">Kayıt Ol</string>
+
+    <!-- Sign In - Sign Up Error -->
+    <string name="fill_in_the_blanks">Boş alanları doldurun</string>
+    <string name="password_insufficient">En az 6 karakterli şifre oluşturun</string>
+    <string name="password_is_not_the_same">Girilen şifreler uyuşmuyor</string>
+    <string name="invalid_email">Geçersiz e-posta adresi</string>
+    <string name="mail_is_in_use">E-posta zaten kullanılıyor</string>
+    <string name="chech_information">Lütfen bilgilerinizi kontrol edin</string>
 
 </resources>

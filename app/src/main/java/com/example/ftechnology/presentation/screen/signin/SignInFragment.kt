@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.ftechnology.R
 import com.example.ftechnology.databinding.FragmentSignInBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
 @Suppress("UNREACHABLE_CODE")
+@AndroidEntryPoint
 class SignInFragment : Fragment() {
 
     private lateinit var binding: FragmentSignInBinding

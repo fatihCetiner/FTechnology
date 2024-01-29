@@ -19,10 +19,17 @@
     <string name="sig_in">Sign In</string>
     <string name="enter_email">Enter E-Mail</string>
     <string name="enter_password">Enter Password</string>
-    <string name="password_again">Password Again</string>
+    <string name="password_confirm">Confirm Password</string>
     <string name="register_yet">Have you registered yet?</string>
     <string name="register_now">Register Now!</string>
     <string name="sig_up">Sign Up</string>
 
+    <!-- Sign In - Sign Up Error -->
+    <string name="fill_in_the_blanks">Fill in the blanks</string>
+    <string name="password_insufficient">Create a password with at least 6 characters</string>
+    <string name="password_is_not_the_same">Password is not the same</string>
+    <string name="invalid_email">Invalid e-mail address</string>
+    <string name="mail_is_in_use">Email already in use</string>
+    <string name="chech_information">Please check information</string>
 
 </resources>

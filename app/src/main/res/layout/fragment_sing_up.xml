@@ -48,6 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfEmailText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -66,6 +67,7 @@
         >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfPasswordText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"/>
@@ -73,11 +75,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tfPasswordAgain"
+        android:id="@+id/tfPasswordConfirm"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="@string/password_again"
+        android:hint="@string/password_confirm"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,6 +87,7 @@
         >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tfPasswordConfirmText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"/>
@@ -102,6 +105,6 @@
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tfPasswordAgain" />
+        app:layout_constraintTop_toBottomOf="@+id/tfPasswordConfirm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

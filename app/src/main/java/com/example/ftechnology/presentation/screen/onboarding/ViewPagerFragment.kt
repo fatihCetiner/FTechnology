@@ -11,9 +11,11 @@ import com.example.ftechnology.presentation.screen.onboarding.adapter.ViewPagerA
 import com.example.ftechnology.presentation.screen.onboarding.screens.FirstScreen
 import com.example.ftechnology.presentation.screen.onboarding.screens.SecondScreen
 import com.example.ftechnology.presentation.screen.onboarding.screens.ThirdScreen
+import dagger.hilt.android.AndroidEntryPoint
 
 
 @Suppress("UNREACHABLE_CODE")
+@AndroidEntryPoint
 class ViewPagerFragment : Fragment() {
 
     private lateinit var binding: FragmentViewPagerBinding
