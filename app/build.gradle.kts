@@ -74,9 +74,13 @@ dependencies {
     implementation(Libs.RoomDb.roomKtx)
 
     // Dagger - Hilt
-    implementation(Libs.DaggerHilt.hiltAndroid)
-    kapt(Libs.DaggerHilt.hiltAndroidCompiler)
-    implementation(Libs.DaggerHilt.hiltNavigationFragment)
+    //implementation(Libs.DaggerHilt.hiltAndroid)
+    //kapt(Libs.DaggerHilt.hiltAndroidCompiler)
+   // implementation(Libs.DaggerHilt.hiltNavigationFragment)
+    implementation("com.google.dagger:hilt-android:2.45")
+    kapt("com.google.dagger:hilt-compiler:2.42")
+    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
+    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2")
 
     // Coroutines
     implementation(Libs.Coroutines.kotlinxCoroutinesCore)

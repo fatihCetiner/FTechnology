@@ -7,7 +7,8 @@ enum class SignUpError {
     MIN_PASSWORD_LENGTH,
     DIFFERENT_PASSWORD,
     INVALID_EMAIL_ADDRESS,
-    EMAIL_ALREADY_IN_USE;
+    EMAIL_ALREADY_IN_USE,
+    UNKNOWN;
 
     companion object {
         fun toStringResource(error: SignUpError): Int {
@@ -17,6 +18,7 @@ enum class SignUpError {
                 DIFFERENT_PASSWORD -> R.string.password_is_not_the_same
                 INVALID_EMAIL_ADDRESS -> R.string.invalid_email
                 EMAIL_ALREADY_IN_USE -> R.string.mail_is_in_use
+                UNKNOWN ->  R.string.unknown_exception
             }
         }
     }

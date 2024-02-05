@@ -1,14 +1,18 @@
 package com.example.ftechnology.data.repository
 
 import com.example.ftechnology.domain.repository.AuthRepository
+import com.example.ftechnology.domain.repository.SignUpResult
 import com.example.ftechnology.presentation.screen.signup.SignUpError
+import com.example.ftechnology.util.Resource
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import javax.inject.Inject
+import kotlin.coroutines.resume
+import kotlin.coroutines.suspendCoroutine
 
-@Suppress("UNREACHABLE_CODE")
 class AuthRepositoryImpl @Inject constructor(
     private val firebaseAuth: FirebaseAuth
 ) : AuthRepository {
@@ -20,27 +24,32 @@ class AuthRepositoryImpl @Inject constructor(
         TODO("Not yet implemented")
     }
 
-    override fun signUpUser(
+    override suspend fun signUp(
         email: String,
         password: String,
-        confirmPassword: String) {
+        confirmPassword: String
+    ): SignUpResult = suspendCoroutine { cont ->
         if (email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-            error(SignUpError.FILL_IN_THE_BLANKS)
-            return
+            cont.resume(SignUpResult.error(SignUpError.FILL_IN_THE_BLANKS))
         }
         if (password.length < 6 || confirmPassword.length < 6) {
-            error(SignUpError.MIN_PASSWORD_LENGTH)
-            return
+            cont.resume(SignUpResult.error(SignUpError.MIN_PASSWORD_LENGTH))
+
         }
         if (password != confirmPassword) {
-            error(SignUpError.DIFFERENT_PASSWORD)
-            return
+            cont.resume(SignUpResult.error(SignUpError.DIFFERENT_PASSWORD))
+
         }
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            error(SignUpError.INVALID_EMAIL_ADDRESS)
-            return
+            cont.resume(SignUpResult.error(SignUpError.INVALID_EMAIL_ADDRESS))
         }
+
         firebaseAuth.createUserWithEmailAndPassword(email, password)
+            .addOnSuccessListener { authResult ->
+                cont.resume(SignUpResult(authResult))
+            }.addOnFailureListener {
+                cont.resume(SignUpResult.error(SignUpError.UNKNOWN))
+            }
     }
 
     override fun logoutUser() {

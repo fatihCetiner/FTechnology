@@ -2,14 +2,19 @@ package com.example.ftechnology.presentation.screen.signup
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.ftechnology.domain.repository.AuthRepository
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SignUpViewModel : ViewModel() {
-
-    private val auth = FirebaseAuth.getInstance()
+@HiltViewModel
+class SignUpViewModel @Inject constructor(
+    private val repository: AuthRepository
+) : ViewModel() {
 
     private val _navigateToSignInScreen = MutableSharedFlow<Unit>()
     val navigateToSignInScreen: SharedFlow<Unit> get() = _navigateToSignInScreen
@@ -22,34 +27,22 @@ class SignUpViewModel : ViewModel() {
         password: String,
         confirmPassword: String,
     ) {
-        if (email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-            sendError(SignUpError.FILL_IN_THE_BLANKS)
-            return
-        }
-        if (password.length < 6 || confirmPassword.length < 6) {
-            sendError(SignUpError.MIN_PASSWORD_LENGTH)
-            return
-        }
-        if (password != confirmPassword) {
-            sendError(SignUpError.DIFFERENT_PASSWORD)
-            return
-        }
-        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            sendError(SignUpError.INVALID_EMAIL_ADDRESS)
-            return
-        }
-
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    navigateToSignInScreen()
-                } else {
-                    sendError(SignUpError.EMAIL_ALREADY_IN_USE)
-                }
+        viewModelScope.launch(Dispatchers.IO) {
+            val signUpResult = repository.signUp(
+                email = email,
+                password = password,
+                confirmPassword = confirmPassword
+            )
+            if (signUpResult.isSuccess) {
+                navigateToSignInScreen()
+            } else {
+                sendError(signUpResult.error)
             }
+        }
     }
 
-    private fun sendError(error: SignUpError) {
+    private fun sendError(error: SignUpError?) {
+        error ?: return
         viewModelScope.launch {
             _error.emit(error)
         }

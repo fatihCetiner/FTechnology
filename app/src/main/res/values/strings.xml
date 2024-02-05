@@ -31,5 +31,7 @@
     <string name="invalid_email">Invalid e-mail address</string>
     <string name="mail_is_in_use">Email already in use</string>
     <string name="chech_information">Please check information</string>
+    <string name="unknown_exception">Email already in use</string>
+
 
 </resources>
