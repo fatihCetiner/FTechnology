@@ -39,6 +39,7 @@ class SignInFragment : Fragment() {
 
         initViews()
         observe()
+        viewModel.checkUserInfo()
         goToSignUpFragment()
     }
     private fun goToSignUpFragment() {

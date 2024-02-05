@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.ftechnology.domain.repository.AuthRepository
 import com.example.ftechnology.presentation.screen.signup.SignUpError
+import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -21,6 +22,13 @@ class SignInViewModel @Inject constructor(
 
     private val _error = MutableSharedFlow<SignInError>()
     val error: SharedFlow<SignInError> get() = _error
+
+    fun checkUserInfo(){
+        val currentUser = repository.getCurrentUser()
+        if (currentUser != null){
+            navigateProductScreen()
+        }
+    }
 
     fun signIn(
         email: String,
