@@ -2,6 +2,9 @@
     <string name="app_name">FTechnology</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--Toast Msg -->
+    <string name="succes_signup">Kayıt Başarılı!</string>
+
     <!--OnBoarding Msg -->
     <string name="quality_title">Kaliteli Ürün</string>
     <string name="quality_product_msg">FTechnology olarak ürünlerimizin kalitesinden büyük gurur duyuyoruz. Her bir ürün hassasiyetle üretilir ve endüstri standartlarını karşılamak ve aşmak için kapsamlı kalite güvence kontrollerinden geçirilir. Her satın alma işleminin mükemmelliğe olan bağlılığımızı yansıtmasını sağlayarak birinci sınıf bir deneyim sunmaya kararlıyız.</string>

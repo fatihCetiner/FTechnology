@@ -37,10 +37,13 @@ class SingUpFragment : Fragment() {
 
     private fun initViews() = with(binding) {
         signUpBtn.setOnClickListener {
+
+            signUpBtn.isEnabled = false
+            signUpBtn.alpha = 0.3f
+
             val email = tfEmailText.text.toString()
             val password = tfPasswordText.text.toString()
             val confirmPassword = tfPasswordConfirmText.text.toString()
-
             viewModel.signUp(
                 email = email,
                 password = password,
@@ -58,6 +61,7 @@ class SingUpFragment : Fragment() {
         }
         lifecycleScope.launch {
             viewModel.navigateToSignInScreen.collect {
+                Toast.makeText(requireContext(), R.string.succes_signup, Toast.LENGTH_LONG).show()
                 findNavController().navigate(R.id.signUpToSignIn)
             }
         }
