@@ -4,8 +4,9 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
-    id("com.google.dagger.hilt.android")
-    id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-parcelize")
+    id("dagger.hilt.android.plugin")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
     id("com.google.gms.google-services")
 }
 
@@ -33,11 +34,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = Config.jvmTarget
+        jvmTarget = "17"
     }
     buildFeatures{
         viewBinding = true
@@ -74,11 +75,8 @@ dependencies {
     implementation(Libs.RoomDb.roomKtx)
 
     // Dagger - Hilt
-    //implementation(Libs.DaggerHilt.hiltAndroid)
-    //kapt(Libs.DaggerHilt.hiltAndroidCompiler)
-   // implementation(Libs.DaggerHilt.hiltNavigationFragment)
-    implementation("com.google.dagger:hilt-android:2.45")
-    kapt("com.google.dagger:hilt-compiler:2.42")
+    implementation("com.google.dagger:hilt-android:2.48.1")
+    kapt("com.google.dagger:hilt-compiler:2.48.1")
     implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
     kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2")
 
@@ -103,5 +101,5 @@ dependencies {
 }
 
 kapt {
-    correctErrorTypes = true
+    correctErrorTypes=true
 }

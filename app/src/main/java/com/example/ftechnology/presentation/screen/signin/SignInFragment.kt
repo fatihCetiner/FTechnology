@@ -32,8 +32,7 @@ class SignInFragment : Fragment() {
     }
     private fun goToSignUpFragment() {
         binding.tvRegisterNow.setOnClickListener {
-            val action = SignInFragmentDirections.signInToSignUp()
-            findNavController().navigate(action)
+            findNavController().navigate(R.id.signInToSignUp)
         }
     }
 }

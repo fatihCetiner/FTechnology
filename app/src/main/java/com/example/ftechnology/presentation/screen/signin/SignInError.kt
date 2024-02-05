@@ -18,7 +18,7 @@ enum class SignInError {
                 MIN_PASSWORD_LENGTH -> R.string.password_insufficient
                 INVALID_EMAIL_ADDRESS -> R.string.invalid_email
                 EMAIL_ALREADY_IN_USE -> R.string.mail_is_in_use
-                CHECK_INFORMATION -> R.string.chech_information
+                CHECK_INFORMATION -> R.string.check_information
             }
         }
     }

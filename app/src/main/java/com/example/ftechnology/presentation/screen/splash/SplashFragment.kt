@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.example.ftechnology.R
 import com.example.ftechnology.databinding.FragmentSplashBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -33,11 +34,9 @@ class SplashFragment : Fragment() {
     private fun observe() {
         viewModel.navigateToOnboarding.observe(viewLifecycleOwner) {
             if (onBoardingFinished()) {
-                val action = SplashFragmentDirections.splashToSignIn()
-                findNavController().navigate(action)
+                findNavController().navigate(R.id.splashToSignIn)
             } else {
-                val action = SplashFragmentDirections.splashToOnboarding()
-                findNavController().navigate(action)
+                findNavController().navigate(R.id.splashToOnboarding)
             }
         }
     }

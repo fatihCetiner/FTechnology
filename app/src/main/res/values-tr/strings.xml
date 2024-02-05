@@ -30,6 +30,7 @@
     <string name="password_is_not_the_same">Girilen şifreler uyuşmuyor</string>
     <string name="invalid_email">Geçersiz e-posta adresi</string>
     <string name="mail_is_in_use">E-posta zaten kullanılıyor</string>
-    <string name="chech_information">Lütfen bilgilerinizi kontrol edin</string>
+    <string name="check_information">Lütfen bilgilerinizi kontrol edin</string>
+    <string name="unknown_exception">Bilinmeyen Hata</string>
 
 </resources>

@@ -30,8 +30,8 @@
     <string name="password_is_not_the_same">Password is not the same</string>
     <string name="invalid_email">Invalid e-mail address</string>
     <string name="mail_is_in_use">Email already in use</string>
-    <string name="chech_information">Please check information</string>
-    <string name="unknown_exception">Email already in use</string>
+    <string name="check_information">Please check information</string>
+    <string name="unknown_exception">Unknown Exception</string>
 
 
 </resources>
