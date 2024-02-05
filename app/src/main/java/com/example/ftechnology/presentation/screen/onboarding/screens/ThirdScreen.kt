@@ -15,15 +15,21 @@ import com.example.ftechnology.databinding.FragmentThirdScreenBinding
 class ThirdScreen : Fragment() {
 
     private lateinit var binding: FragmentThirdScreenBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentThirdScreenBinding.inflate(inflater, container, false)
 
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
+
         binding.tvFinish.setOnClickListener {
             findNavController().navigate(R.id.onboardingTosignIn)
             onBoardingFinish()
+        }
+        binding.tvBack2.setOnClickListener {
+            viewPager?.currentItem = 1
         }
         return binding.root
     }

@@ -5,7 +5,7 @@
     <!--Toast Msg -->
     <string name="succes_signup">Success!</string>
 
-    <!-- OnBoarding Screen Msg -->
+    <!-- OnBoarding Screen Msg And Text-->
     <string name="quality_title">Product Quality</string>
     <string name="quality_product_msg">At FTechnology, we take immense pride in the quality of our products. Each item is crafted with precision and undergoes thorough quality assurance checks to meet and exceed industry standards. We\'re committed to delivering a premium experience, ensuring that every purchase reflects our dedication to excellence.</string>
 
@@ -16,6 +16,7 @@
     <string name="delivery_msg">We understand the importance of your time, and our commitment to prompt delivery reflects that understanding. Our logistics team works tirelessly to ensure your orders are processed swiftly and delivered to your doorstep in the shortest possible time. Experience the convenience of reliable, on-time delivery with us.</string>
 
     <string name="next">Next</string>
+    <string name="back">Back</string>
     <string name="finish">Finish</string>
 
     <!-- Sign In - Sign Up Screen -->

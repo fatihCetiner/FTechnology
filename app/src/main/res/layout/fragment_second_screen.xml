@@ -56,6 +56,20 @@
         app:layout_constraintTop_toBottomOf="@+id/tvSecureTitle" />
 
     <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/back"
+        android:textColor="@color/secondary500"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvNext2"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/tvNext2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

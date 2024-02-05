@@ -5,7 +5,7 @@
     <!--Toast Msg -->
     <string name="succes_signup">Kayıt Başarılı!</string>
 
-    <!--OnBoarding Msg -->
+    <!-- OnBoarding Screen Msg And Text-->
     <string name="quality_title">Kaliteli Ürün</string>
     <string name="quality_product_msg">FTechnology olarak ürünlerimizin kalitesinden büyük gurur duyuyoruz. Her bir ürün hassasiyetle üretilir ve endüstri standartlarını karşılamak ve aşmak için kapsamlı kalite güvence kontrollerinden geçirilir. Her satın alma işleminin mükemmelliğe olan bağlılığımızı yansıtmasını sağlayarak birinci sınıf bir deneyim sunmaya kararlıyız.</string>
 
@@ -16,6 +16,7 @@
     <string name="delivery_msg">Zamanınızın önemini anlıyoruz ve hızlı teslimat taahhüdümüz bu anlayışı yansıtıyor. Lojistik ekibimiz, siparişlerinizin hızlı bir şekilde işlenmesini ve mümkün olan en kısa sürede kapınıza teslim edilmesini sağlamak için yorulmadan çalışır. Güvenilir, zamanında teslimatın rahatlığını bizimle yaşayın.</string>
 
     <string name="next">İleri</string>
+    <string name="back">Geri</string>
     <string name="finish">Bitti</string>
 
     <!-- Sign In - Sign Up Screen -->

@@ -10,9 +10,11 @@ import com.example.ftechnology.R
 import com.example.ftechnology.databinding.FragmentSecondScreenBinding
 
 
+
 class SecondScreen : Fragment() {
 
     private lateinit var binding: FragmentSecondScreenBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,6 +25,9 @@ class SecondScreen : Fragment() {
 
         binding.tvNext2.setOnClickListener {
             viewPager?.currentItem = 2
+        }
+        binding.tvBack.setOnClickListener {
+            viewPager?.currentItem = 0
         }
         return binding.root
     }

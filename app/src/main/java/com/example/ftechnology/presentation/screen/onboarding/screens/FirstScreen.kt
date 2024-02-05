@@ -11,9 +11,11 @@ import com.example.ftechnology.R
 import com.example.ftechnology.databinding.FragmentFirstScreenBinding
 
 
+
 class FirstScreen : Fragment() {
 
     private lateinit var binding: FragmentFirstScreenBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
