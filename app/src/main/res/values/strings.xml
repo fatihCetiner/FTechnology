@@ -4,6 +4,7 @@
 
     <!--Toast Msg -->
     <string name="succes_signup">Success!</string>
+    <string name="welcome">Welcome</string>
 
     <!-- OnBoarding Screen Msg And Text-->
     <string name="quality_title">Product Quality</string>

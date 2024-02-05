@@ -4,6 +4,7 @@
 
     <!--Toast Msg -->
     <string name="succes_signup">Kayıt Başarılı!</string>
+    <string name="welcome">Hoşgeldiniz</string>
 
     <!-- OnBoarding Screen Msg And Text-->
     <string name="quality_title">Kaliteli Ürün</string>

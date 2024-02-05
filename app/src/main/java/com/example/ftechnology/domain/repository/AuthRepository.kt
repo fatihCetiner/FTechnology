@@ -4,7 +4,10 @@ import com.google.firebase.auth.FirebaseUser
 
 interface AuthRepository {
 
-    fun signInUser(email: String, password: String)
+    suspend fun signIn(
+        email: String,
+        password: String
+    ): SignInResult
 
     suspend fun signUp(
         email: String,

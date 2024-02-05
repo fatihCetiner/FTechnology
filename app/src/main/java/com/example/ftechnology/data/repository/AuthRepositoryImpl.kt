@@ -1,10 +1,10 @@
 package com.example.ftechnology.data.repository
 
 import com.example.ftechnology.domain.repository.AuthRepository
+import com.example.ftechnology.domain.repository.SignInResult
 import com.example.ftechnology.domain.repository.SignUpResult
+import com.example.ftechnology.presentation.screen.signin.SignInError
 import com.example.ftechnology.presentation.screen.signup.SignUpError
-import com.example.ftechnology.util.Resource
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -20,8 +20,27 @@ class AuthRepositoryImpl @Inject constructor(
     private val _error = MutableSharedFlow<SignUpError>()
     val error: SharedFlow<SignUpError> get() = _error
 
-    override fun signInUser(email: String, password: String) {
-        TODO("Not yet implemented")
+    override suspend fun signIn(
+        email: String,
+        password: String
+    ): SignInResult  = suspendCoroutine { cont ->
+        if (email.isEmpty() || password.isEmpty()) {
+            cont.resume(SignInResult.error(SignInError.FILL_IN_THE_BLANKS))
+        }
+        if (password.length < 6) {
+            cont.resume(SignInResult.error(SignInError.MIN_PASSWORD_LENGTH))
+        }
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            cont.resume(SignInResult.error(SignInError.INVALID_EMAIL_ADDRESS))
+        }
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { authResult ->
+                if (authResult.isSuccessful) {
+                    cont.resume(SignInResult(authResult))
+                } else {
+                    cont.resume(SignInResult.error(SignInError.CHECK_INFORMATION))
+                }
+            }
     }
 
     override suspend fun signUp(
@@ -43,7 +62,6 @@ class AuthRepositoryImpl @Inject constructor(
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             cont.resume(SignUpResult.error(SignUpError.INVALID_EMAIL_ADDRESS))
         }
-
         firebaseAuth.createUserWithEmailAndPassword(email, password)
             .addOnSuccessListener { authResult ->
                 cont.resume(SignUpResult(authResult))

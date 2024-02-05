@@ -1,14 +1,15 @@
 package com.example.ftechnology.presentation.screen.signin
 
 import com.example.ftechnology.R
-import com.example.ftechnology.presentation.screen.signup.SignUpError
+
 
 enum class SignInError {
     FILL_IN_THE_BLANKS,
     MIN_PASSWORD_LENGTH,
     INVALID_EMAIL_ADDRESS,
     EMAIL_ALREADY_IN_USE,
-    CHECK_INFORMATION;
+    CHECK_INFORMATION,
+    UNKNOWN;
 
 
     companion object {
@@ -19,6 +20,7 @@ enum class SignInError {
                 INVALID_EMAIL_ADDRESS -> R.string.invalid_email
                 EMAIL_ALREADY_IN_USE -> R.string.mail_is_in_use
                 CHECK_INFORMATION -> R.string.check_information
+                SignInError.UNKNOWN ->  R.string.unknown_exception
             }
         }
     }
