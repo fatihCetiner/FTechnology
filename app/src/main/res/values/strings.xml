@@ -4,7 +4,7 @@
 
     <!--Toast Msg -->
     <string name="succes_signup">Success!</string>
-    <string name="welcome">Welcome</string>
+    <string name="welcome">Welcome!</string>
 
     <!-- OnBoarding Screen Msg And Text-->
     <string name="quality_title">Product Quality</string>
@@ -37,5 +37,25 @@
     <string name="mail_is_in_use">Email already in use</string>
     <string name="check_information">Please check information</string>
     <string name="unknown_exception">Unknown Exception</string>
+
+    <!-- Page Name -->
+    <string name="product">Products</string>
+    <string name="favorite">Favorite</string>
+    <string name="cart">Cart</string>
+    <string name="settings">Settings</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
 </resources>

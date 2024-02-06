@@ -38,4 +38,10 @@
     <string name="check_information">Lütfen bilgilerinizi kontrol edin</string>
     <string name="unknown_exception">Bilinmeyen Hata</string>
 
+    <!-- Page Name -->
+    <string name="product">Ürünler</string>
+    <string name="favorite">Favoriler</string>
+    <string name="cart">Sepet</string>
+    <string name="settings">Ayarlar</string>
+
 </resources>

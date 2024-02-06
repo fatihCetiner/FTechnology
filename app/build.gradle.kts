@@ -52,6 +52,7 @@ dependencies {
     implementation(Libs.Core.material)
     implementation(Libs.Core.constraintLayout)
     implementation(Libs.Core.swipeRefreshLayout)
+    implementation("androidx.preference:preference:1.2.1")
     testImplementation(Libs.Core.junit)
     androidTestImplementation(Libs.Core.testExtJUnit)
     androidTestImplementation(Libs.Core.espressoCore)

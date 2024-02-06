@@ -25,7 +25,11 @@
         android:id="@+id/productFragment"
         android:name="com.example.ftechnology.presentation.screen.product.ProductFragment"
         android:label="fragment_product"
-        tools:layout="@layout/fragment_product" />
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/productToDetails"
+            app:destination="@id/detailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
         android:name="com.example.ftechnology.presentation.screen.onboarding.ViewPagerFragment"
@@ -60,4 +64,23 @@
             android:id="@+id/signUpToSignIn"
             app:destination="@id/signInFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.ftechnology.presentation.screen.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.ftechnology.presentation.screen.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.ftechnology.presentation.screen.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.ftechnology.presentation.screen.settings.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>
