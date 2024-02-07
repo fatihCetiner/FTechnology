@@ -65,5 +65,12 @@
     <!-- Is empty cart Msg -->
     <string name="empty_cart_msg">No products in your cart yet!</string>
 
+    <!-- Settings Page-->
+    <string name="general">General</string>
+    <string name="user">User</string>
+    <string name="log_out">Log Out</string>
+    <string name="change_theme">Change theme</string>
+    <string name="change_language">Change Language</string>
+
 
 </resources>

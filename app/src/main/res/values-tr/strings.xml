@@ -65,4 +65,12 @@
     <!-- Is empty cart Msg -->
     <string name="empty_cart_msg">Sepetinizde henüz hiç ürün yok!</string>
 
+    <!-- Settings Page-->
+    <string name="general">Genel</string>
+    <string name="user">Kullanıcı</string>
+    <string name="log_out">Çıkış Yap</string>
+    <string name="change_theme">Tema Değiştir</string>
+    <string name="change_language">Dil Değiştir</string>
+
+
 </resources>
