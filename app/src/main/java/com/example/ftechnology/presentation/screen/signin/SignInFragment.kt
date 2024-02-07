@@ -72,7 +72,6 @@ class SignInFragment : Fragment() {
         }
         lifecycleScope.launch {
             viewModel.navigateToSignInScreen.collect {
-                Toast.makeText(requireContext(), R.string.welcome, Toast.LENGTH_LONG).show()
                 findNavController().navigate(R.id.signInToProduct)
             }
         }
