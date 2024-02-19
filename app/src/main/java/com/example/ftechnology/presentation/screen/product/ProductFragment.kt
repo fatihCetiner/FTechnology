@@ -70,12 +70,13 @@ class ProductFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             try {
                 viewModel.productsState.collectLatest { resource ->
-                    when(resource){
+                    when (resource) {
                         is Resource.Loading -> showLoading()
                         is Resource.Success -> {
                             hideLoading()
                             productListAdapter.submitList(resource.data)
                         }
+
                         is Resource.Error -> {
                             hideLoading()
                             showError(resource.message ?: "An error occurred")

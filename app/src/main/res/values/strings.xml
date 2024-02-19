@@ -74,10 +74,13 @@
     <string name="user">User</string>
     <string name="log_out">Log Out</string>
     <string name="change_theme">Change theme</string>
-    <string name="change_language">Change Language</string>
+    <string name="change_language">Language</string>
     <string name="exit_question">Do you want to log out?</string>
     <string name="success_exit">Exit has been made!</string>
     <string name="failed_exit">Exit has been not made!</string>
+    <string name="enable_dark_mode">Enable dark mode</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="lang_pref">Select your preferred language</string>
 
     <!-- Error Msg-->
     <string name="load_error">An Error Occurred Try Again!</string>

@@ -78,7 +78,13 @@
         android:id="@+id/detailsFragment"
         android:name="com.example.ftechnology.presentation.screen.details.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_productFragment"
+            app:destination="@id/productFragment"
+            app:popUpTo="@id/detailsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.ftechnology.presentation.screen.settings.SettingsFragment"

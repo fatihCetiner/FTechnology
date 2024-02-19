@@ -4,23 +4,24 @@
 
     <PreferenceCategory app:title="@string/general">
 
-        <ListPreference
-            app:defaultValue="reply"
-            app:entries="@array/reply_entries"
-            app:entryValues="@array/reply_values"
-            app:key="reply"
-            app:title="@string/change_theme"
-            android:icon="@drawable/ic_theme"
-            app:useSimpleSummaryProvider="true" />
 
         <ListPreference
-            app:defaultValue="reply"
-            app:entries="@array/reply_entries"
-            app:entryValues="@array/reply_values"
-            app:key="reply"
+            app:entries="@array/language_options"
+            app:entryValues="@array/language_codes"
+            app:key="language_list"
+            app:summary="@string/lang_pref"
             app:title="@string/change_language"
             android:icon="@drawable/ic_language"
+            app:defaultValue="en"
             app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:key="theme_switch"
+            app:title="@string/dark_mode"
+            app:summary="@string/enable_dark_mode"
+            android:icon="@drawable/ic_theme"
+            app:defaultValue="false" />
+
 
     </PreferenceCategory>
 
