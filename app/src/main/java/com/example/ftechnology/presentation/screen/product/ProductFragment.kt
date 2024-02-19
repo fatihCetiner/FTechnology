@@ -71,15 +71,19 @@ class ProductFragment : Fragment() {
             try {
                 viewModel.productsState.collectLatest { resource ->
                     when (resource) {
-                        is Resource.Loading -> showLoading()
+                        is Resource.Loading -> {
+                            productPb.visibility = View.VISIBLE
+                            errorTv.visibility = View.GONE
+                        }
                         is Resource.Success -> {
-                            hideLoading()
+                            productPb.visibility = View.GONE
+                            errorTv.visibility = View.GONE
                             productListAdapter.submitList(resource.data)
                         }
 
                         is Resource.Error -> {
-                            hideLoading()
-                            showError(resource.message ?: "An error occurred")
+                            productPb.visibility = View.GONE
+                            errorTv.visibility = View.VISIBLE
                         }
                     }
                 }
@@ -87,25 +91,10 @@ class ProductFragment : Fragment() {
                 Log.e("Error", "Not Loading Data !")
             }
         }
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.navigateToDetailScreen.collect { productId ->
                 findNavController().navigate(R.id.productToDetails)
             }
         }
     }
-
-    private fun showLoading() = with(binding) {
-        productPb.visibility = View.VISIBLE
-        errorTv.visibility = View.GONE
-    }
-
-    private fun hideLoading() = with(binding) {
-        productPb.visibility = View.GONE
-    }
-
-    private fun showError(errorMessage: String) = with(binding) {
-        errorTv.visibility = View.VISIBLE
-        errorTv.text = errorMessage
-    }
-
 }
