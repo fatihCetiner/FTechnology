@@ -82,5 +82,9 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.ftechnology.presentation.screen.settings.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/settingsToSignIn"
+            app:destination="@id/signInFragment" />
+    </fragment>
 </navigation>

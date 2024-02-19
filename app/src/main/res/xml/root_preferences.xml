@@ -27,8 +27,7 @@
         <EditTextPreference
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:defaultValue="Default value"
-            android:selectAllOnFocus="true"
+            app:key="logout_click"
             android:singleLine="true"
             android:icon="@drawable/ic_logout"
             android:title="@string/log_out" />
