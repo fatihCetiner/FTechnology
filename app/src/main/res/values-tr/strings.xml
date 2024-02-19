@@ -72,5 +72,8 @@
     <string name="change_theme">Tema Değiştir</string>
     <string name="change_language">Dil Değiştir</string>
 
+    <!-- Error Msg-->
+    <string name="load_error">Bir Hata Oluştu Tekrar Deneyin!</string>
+
 
 </resources>
