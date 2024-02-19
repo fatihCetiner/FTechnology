@@ -1,14 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.screen.details.DetailsFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/favoriteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_detail_fav_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/no_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/favoriteButton" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Product Name"
+        android:textColor="@color/primary600"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="20$"
+        android:textColor="@color/primary600"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/productName"
+        app:layout_constraintStart_toStartOf="@+id/productName"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvButton"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/productPrice"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDecrease"
+                android:layout_width="33dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/secondary500"
+                android:text="-"
+                android:textColor="@color/primary600"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="19dp"
+                tools:layout_editor_absoluteY="352dp" />
+
+            <TextView
+                android:id="@+id/tvPiece"
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/primary600"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="52dp"
+                tools:layout_editor_absoluteY="363dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnIncrease"
+                android:layout_width="33dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/secondary500"
+                android:text="+"
+                android:textColor="@color/primary600"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="90dp"
+                tools:layout_editor_absoluteY="357dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/addCartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/cvButton"
+        android:backgroundTint="@color/secondary500"
+        android:drawableRight="@drawable/ic_cart"
+        android:text="@string/add_to_card"
+        android:textColor="@color/primary600"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

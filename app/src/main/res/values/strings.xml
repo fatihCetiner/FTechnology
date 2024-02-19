@@ -76,10 +76,13 @@
     <string name="change_theme">Change theme</string>
     <string name="change_language">Change Language</string>
     <string name="exit_question">Do you want to log out?</string>
-    <string name="succes_exit">Exit has been made!</string>
+    <string name="success_exit">Exit has been made!</string>
     <string name="failed_exit">Exit has been not made!</string>
 
     <!-- Error Msg-->
     <string name="load_error">An Error Occurred Try Again!</string>
+
+    <!-- Button Txt-->
+    <string name="add_to_card">Add To Cart</string>
 
 </resources>

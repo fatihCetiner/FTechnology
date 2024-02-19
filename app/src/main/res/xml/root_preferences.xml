@@ -1,4 +1,5 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <PreferenceCategory app:title="@string/general">
@@ -24,7 +25,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/user">
-        <EditTextPreference
+        <Preference
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:key="logout_click"

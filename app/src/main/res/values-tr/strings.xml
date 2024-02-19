@@ -76,11 +76,14 @@
     <string name="change_theme">Tema Değiştir</string>
     <string name="change_language">Dil Değiştir</string>
     <string name="exit_question">Çıkış Yapmak İstiyormusunuz?</string>
-    <string name="succes_exit">Çıkış Yapıldı!</string>
+    <string name="success_exit">Çıkış Yapıldı!</string>
     <string name="failed_exit">Çıkış Yapılamadı!</string>
 
     <!-- Error Msg-->
     <string name="load_error">Bir Hata Oluştu Tekrar Deneyin!</string>
+
+    <!-- Button Txt-->
+    <string name="add_to_card">Sepete Ekle</string>
 
 
 </resources>

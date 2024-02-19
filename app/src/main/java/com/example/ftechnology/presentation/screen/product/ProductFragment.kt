@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.ftechnology.R
 import com.example.ftechnology.databinding.FragmentProductBinding
 import com.example.ftechnology.presentation.screen.product.adapter.ProductListAdapter
 import com.example.ftechnology.util.Resource
@@ -82,6 +84,11 @@ class ProductFragment : Fragment() {
                 }
             } catch (e: Exception) {
                 Log.e("Error", "Not Loading Data !")
+            }
+        }
+        lifecycleScope.launch {
+            viewModel.navigateToDetailScreen.collect { productId ->
+                findNavController().navigate(R.id.productToDetails)
             }
         }
     }
