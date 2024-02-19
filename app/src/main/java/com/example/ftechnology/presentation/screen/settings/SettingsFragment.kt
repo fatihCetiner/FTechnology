@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceManager
 import androidx.preference.SwitchPreferenceCompat
 import com.example.ftechnology.R
 import com.google.firebase.auth.FirebaseAuth
@@ -20,9 +21,11 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
 
+
         val themeSwitch = findPreference<SwitchPreferenceCompat>("theme_switch")
         themeSwitch?.setOnPreferenceChangeListener { _, newValue ->
             val isDarkTheme = newValue as Boolean
+            saveThemePreference(isDarkTheme)
             AppCompatDelegate.setDefaultNightMode(if (isDarkTheme) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO)
             requireActivity().recreate()
             true
@@ -31,11 +34,22 @@ class SettingsFragment : PreferenceFragmentCompat() {
         val languageList = findPreference<ListPreference>("language_list")
         languageList?.setOnPreferenceChangeListener { _, newValue ->
             val selectedLanguage = newValue as String
+            saveLanguagePreference(selectedLanguage)
             setLocale(selectedLanguage)
             requireActivity().recreate()
             true
         }
 
+    }
+
+    private fun saveLanguagePreference(languageCode: String) {
+        val sharedPreferences = context?.let { PreferenceManager.getDefaultSharedPreferences(it) }
+        sharedPreferences?.edit()?.putString("language_key", languageCode)?.apply()
+    }
+
+    private fun saveThemePreference(isDarkTheme: Boolean) {
+        val sharedPreferences = context?.let { PreferenceManager.getDefaultSharedPreferences(it) }
+        sharedPreferences?.edit()?.putBoolean("theme_key", isDarkTheme)?.apply()
     }
 
     private fun setLocale(languageCode: String) {
@@ -45,6 +59,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
         configuration.setLocale(locale)
         resources.updateConfiguration(configuration, resources.displayMetrics)
     }
+
+
 
     override fun onPreferenceTreeClick(preference: Preference): Boolean {
         if (preference?.key == "logout_click") {

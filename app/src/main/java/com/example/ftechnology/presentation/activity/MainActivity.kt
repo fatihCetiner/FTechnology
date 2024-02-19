@@ -1,15 +1,19 @@
 package com.example.ftechnology.presentation.activity
 
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import androidx.preference.PreferenceManager
 import com.example.ftechnology.R
 import com.example.ftechnology.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.Locale
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -19,6 +23,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+
+        applyTheme()
+        applyLanguage()
+
         setContentView(binding.root)
 
         val navHostFragment =
@@ -38,5 +46,21 @@ class MainActivity : AppCompatActivity() {
                 R.id.cartFragment -> binding.bottomNavigation.isVisible = true
             }
         }
+    }
+
+    private fun applyTheme() {
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val isDarkTheme = sharedPreferences.getBoolean("theme_key", false)
+        AppCompatDelegate.setDefaultNightMode(if (isDarkTheme) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO)
+    }
+
+    private fun applyLanguage() {
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val languageCode = sharedPreferences.getString("language_key", "en")
+        val locale = Locale(languageCode!!)
+        Locale.setDefault(locale)
+        val configuration = Configuration()
+        configuration.locale = locale
+        resources.updateConfiguration(configuration, resources.displayMetrics)
     }
 }
