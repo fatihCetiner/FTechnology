@@ -14,13 +14,17 @@ import androidx.preference.PreferenceManager
 import androidx.preference.SwitchPreferenceCompat
 import com.example.ftechnology.R
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.Locale
+import javax.inject.Inject
 
-class SettingsFragment : PreferenceFragmentCompat() {
+@AndroidEntryPoint
+class SettingsFragment @Inject constructor(
+
+) : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
-
 
         val themeSwitch = findPreference<SwitchPreferenceCompat>("theme_switch")
         themeSwitch?.setOnPreferenceChangeListener { _, newValue ->
@@ -60,8 +64,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
         resources.updateConfiguration(configuration, resources.displayMetrics)
     }
 
-
-
     override fun onPreferenceTreeClick(preference: Preference): Boolean {
         if (preference?.key == "logout_click") {
             showLogoutConfirmationDialog()
@@ -85,11 +87,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
     private fun logout() {
-        FirebaseAuth.getInstance().signOut()
+       FirebaseAuth.getInstance().signOut()
     }
 
     private fun redirectToLoginPage() {
         findNavController().navigate(R.id.settingsToSignIn)
     }
-
 }
