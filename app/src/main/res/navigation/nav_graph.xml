@@ -80,10 +80,13 @@
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action
-            android:id="@+id/action_detailsFragment_to_productFragment"
+            android:id="@+id/detailsToProduct"
             app:destination="@id/productFragment"
             app:popUpTo="@id/detailsFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="id"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"

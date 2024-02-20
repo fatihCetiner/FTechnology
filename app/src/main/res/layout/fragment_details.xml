@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/favoriteButton" />
 
     <TextView
-        android:id="@+id/productName"
+        android:id="@+id/productNameTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/productImage"
@@ -57,25 +57,25 @@
         app:layout_constraintTop_toBottomOf="@+id/productImage" />
 
     <TextView
-        android:id="@+id/productPrice"
+        android:id="@+id/productPriceTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/productName"
+        android:layout_below="@id/productNameTv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:text="20$"
         android:textColor="@color/primary600"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/productName"
-        app:layout_constraintStart_toStartOf="@+id/productName"
-        app:layout_constraintTop_toBottomOf="@+id/productName" />
+        app:layout_constraintEnd_toEndOf="@+id/productNameTv"
+        app:layout_constraintStart_toStartOf="@+id/productNameTv"
+        app:layout_constraintTop_toBottomOf="@+id/productNameTv" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvButton"
         android:layout_width="110dp"
         android:layout_height="45dp"
-        android:layout_below="@+id/productPrice"
+        android:layout_below="@+id/productPriceTv"
         android:layout_alignParentStart="true"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="10dp"
