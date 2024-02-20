@@ -1,6 +1,7 @@
 package com.example.ftechnology.presentation.screen.details
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -29,7 +30,7 @@ class DetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentDetailsBinding.inflate(layoutInflater, container, false)
         return (binding.root)
     }
@@ -38,9 +39,17 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        /*
         arguments?.let {
             id = arguments?.getString("productId") ?: ""
             viewModel.getProductDetail(id!!)
+            Log.d("ProductId","$id")
+        }
+
+         */
+        arguments?.let {
+            id = arguments?.getString("productId") ?: ""
+            viewModel.getProductById(id!!)
         }
 
         binding.backButton.setOnClickListener {

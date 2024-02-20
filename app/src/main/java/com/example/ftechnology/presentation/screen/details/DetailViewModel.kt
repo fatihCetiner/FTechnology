@@ -20,7 +20,7 @@ class DetailViewModel @Inject constructor(
     private val _productDetailState = MutableStateFlow<Resource<ProductDto>>(Resource.Loading())
     val productDetailState: StateFlow<Resource<ProductDto>> = _productDetailState
 
-    fun getProductDetail(productId: String) {
+    fun getProductById(productId: String) {
         viewModelScope.launch {
             _productDetailState.value = getProductByIdUseCase(productId).first()
         }

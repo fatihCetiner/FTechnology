@@ -94,8 +94,10 @@ class ProductFragment : Fragment() {
         }
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.navigateToDetailScreen.collect { productId ->
-                val bundle = bundleOf("productId" to productId)
+                val bundle = Bundle()
+                bundle.putString("productId", productId.toString())
                 findNavController().navigate(R.id.productToDetails,bundle)
+                Log.d("ProductId","$bundle")
             }
         }
     }
